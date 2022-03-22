@@ -6853,7 +6853,7 @@ fa {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  .drop a:not(:first-child) {
+  .drop a {
     display: none;
   }
   .drop a.icon {
