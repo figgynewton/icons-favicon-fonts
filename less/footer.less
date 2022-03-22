@@ -2,18 +2,24 @@ footer {
   width: 100%;
   min-height: 50px;
   background-color: orange;
-  padding: 10px;
   display: block;
+  padding: 10px;
   text-align: center;
   align-items: center;
-  justify-content: right;
+}
 
   a{
     color: black;
   }
 
-  flex-direction: column;
-  @media screen and (min-width: 600px) {
-    flex-direction: row;
+  footer {
+    @media screen and (max-width: 600px) {
+      width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 15px;
+      padding-right: 8px;
+    }
   }
-}

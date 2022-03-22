@@ -6842,24 +6842,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: right;
-  border: 0;
-  font-weight: bold;
   font-size: 20px;
   font-family: "Bungee";
-}
-nav i {
-  color: white;
 }
 nav a {
   text-decoration: none;
   margin-right: 10px;
   color: white;
 }
-nav #links {
+nav #hamburger {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  nav #links {
+  nav #hamburger {
     display: inline;
   }
 }
@@ -6869,19 +6864,7 @@ nav #menu-button {
   display: block;
   position: absolute;
   right: 0;
-  vertical-align: center;
-  text-align: center;
-  font-size: 35px;
   font-weight: bold;
-  cursor: pointer;
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  text-size-adjust: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 @media screen and (min-width: 600px) {
   nav #menu-button {
@@ -6891,9 +6874,10 @@ nav #menu-button {
 nav #menu {
   min-height: 100px;
   width: 120px;
-  padding-bottom: 10px;
+  padding: 20px;
   background-color: red;
   position: absolute;
+  text-align: center;
   right: 0px;
   top: 50px;
   display: none;
@@ -6905,8 +6889,14 @@ nav #menu a {
 * {
   margin: 0;
 }
+h1 {
+  display: inline-block;
+  font-size: 48px;
+  padding: 50px;
+}
 i {
-  font-size: 24px;
+  font-size: 20px;
+  color: white;
 }
 .home {
   font-family: PaletteMosaic;
@@ -6921,19 +6911,23 @@ footer {
   width: 100%;
   min-height: 50px;
   background-color: orange;
-  padding: 10px;
   display: block;
+  padding: 10px;
   text-align: center;
   align-items: center;
-  justify-content: right;
-  flex-direction: column;
 }
-footer a {
+a {
   color: black;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   footer {
-    flex-direction: row;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+    padding-right: 8px;
   }
 }
 /*# sourceMappingURL=style.css.map */
