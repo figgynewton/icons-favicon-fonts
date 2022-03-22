@@ -6864,7 +6864,6 @@ nav #menu-button {
   display: block;
   position: absolute;
   right: 0;
-  font-weight: bold;
 }
 @media screen and (min-width: 600px) {
   nav #menu-button {
