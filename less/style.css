@@ -6835,46 +6835,72 @@ fa {
   font-family: Shizuru;
   src: url("../assets/fonts/Shizuru-Regular.ttf");
 }
-.drop {
-  overflow: hidden;
+nav {
+  width: 100%;
+  min-height: 50px;
   background-color: red;
-  font-family: Bungee;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border: 0;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Bungee";
 }
-.drop a {
-  float: right;
-  display: block;
+nav i {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
 }
-.drop .icon {
+nav a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: white;
+}
+nav #links {
   display: none;
 }
-@media screen and (max-width: 600px) {
-  .drop a {
-    display: none;
-  }
-  .drop a.icon {
-    float: right;
-    display: block;
+@media screen and (min-width: 600px) {
+  nav #links {
+    display: inline;
   }
 }
-@media screen and (max-width: 600px) {
-  .drop.responsive {
-    position: relative;
+nav #menu-button {
+  height: 40px;
+  width: 40px;
+  display: block;
+  position: absolute;
+  right: 0;
+  vertical-align: center;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media screen and (min-width: 600px) {
+  nav #menu-button {
+    display: none;
   }
-  .drop.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .drop.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+}
+nav #menu {
+  min-height: 100px;
+  width: 120px;
+  padding-bottom: 10px;
+  background-color: red;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  display: none;
+}
+nav #menu a {
+  display: block;
+  margin-top: 10px;
 }
 * {
   margin: 0;
@@ -6900,15 +6926,14 @@ footer {
   text-align: center;
   align-items: center;
   justify-content: right;
+  flex-direction: column;
 }
 footer a {
   color: black;
 }
 @media screen and (min-width: 600px) {
   footer {
-    text-align: center;
-    display: block;
-    padding: 10px;
+    flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
